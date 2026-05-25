@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Calc</title>
+    <style>
+        #small-section {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(180, 88, 103);
+        }
+
+        #big-section {
+            display: inline-block;
+            height: 20px;
+            width: calc(100% - 20px);
+            background-color: rgb(232, 170, 180);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="big-section"></section><section id="small-section"></section>
+    </div>
+</body>
+</html>
