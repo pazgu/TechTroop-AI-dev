@@ -1,5 +1,0 @@
-Straight
-Curved
-Dotted
-Dashed
-Zigzag
