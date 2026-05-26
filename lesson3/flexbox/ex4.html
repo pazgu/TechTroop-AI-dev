@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Sidebar Layout</title>
+    <style>
+        .container {
+            display: flex;
+            width: 80%;
+            width: 800px;
+            min-height: 500px; 
+            margin: 40px auto;
+            border: 3px solid #f07878; 
+        }
+
+        .sidebar {
+            flex: 0 0 25%;
+            border-right: 3px solid #f07878; 
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; 
+        }
+
+       
+        .bars-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px; 
+        }
+
+        .bar {
+            height: 10px; 
+            background-color: #f07878; 
+            border-radius: 2px; 
+        }
+
+        .short-bar {
+            width: 50px;
+        }
+
+        .long-bar {
+            width: 90px;
+        }
+
+        .medium-bar {
+            width: 35px;
+        }
+
+        .main-content {
+            padding: 40px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="bars-group">
+                <div class="bar short-bar"></div>
+                <div class="bar long-bar"></div>
+                <div class="bar medium-bar"></div>
+            </div>
+        </div>
+
+        <main class="main-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </main>
+    </div>
+
+</body>
+</html>
