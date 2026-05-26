@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .page-container {
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+          margin: auto;
+          border: 3px solid #f07878;
+        }
+
+        .large-box {
+            flex: 3;
+            border-bottom: 3px solid #f07878;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color:  #f07878;
+        }
+
+        .small-box {
+            flex: 1;
+            display: flex;
+            padding: 30px;
+            align-items: center;
+            justify-content: space-between
+        }
+        
+        .bar {
+            height: 10px;
+            background-color: #f07878;
+            border-radius: 2px;
+            width: 50px;
+        }
+
+        .row-bar {
+            display: flex;
+            gap: 8px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="large-box">
+            <div class="circle"></div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+        <div class="small-box">
+            <div class="bar"></div>
+            <div class="row-bar">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
