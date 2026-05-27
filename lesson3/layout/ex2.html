@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+            margin: 0;
+            padding: 0;
+            font-family: Segoe UI;
+            background-color: #f3f4f6;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            background-color: #6366f1; 
+            padding: 0 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-links-left, .nav-links-right {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 16px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #4f46e5; 
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none; 
+            position: absolute; 
+            top: 100%; 
+            left: 0;
+            background-color: white;
+            min-width: 200px;
+            list-style: none;
+            padding: 5px 0;
+            margin: 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            border-radius: 0 0 6px 6px;
+        }
+
+        .dropdown-menu a {
+            color: #333333;
+            padding: 12px 20px;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f3f4f6;
+            color: #4f46e5;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .main-container {
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content-box {
+            background-color: white;
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .content-box h1 {
+            margin-top: 0;
+            color: #111827;
+        }
+
+        .content-box p {
+            color: #4b5563;
+            line-height: 1.6;
+        } 
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+    <ul class="nav-links-left">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Mobile Apps</a></li>
+                <li><a href="#">Digital Marketing</a></li>
+                <li><a href="#">Consulting</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <ul class="nav-links-right">
+        <li><a href="#">Account</a></li>
+        <li><a href="#">Cart</a></li>
+    </ul>
+
+</nav>
+<main class="main-container">
+    <div class="content-box">
+        <h1>Welcome to Our Website</h1>
+        <p>This is the main content area. Dropdown menus appear on top of this content when you hover over the navigation bar.</p>
+    </div>
+</main>
+</body>
+</html>
