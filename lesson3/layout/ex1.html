@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail Layout Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family:Segoe UI;
+            background-color: #fcfcfc;
+            display: flex;
+            flex-direction: column; 
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(to right, #5c4ca4, #7c5cb4); /* גוון סגול הדרגתי כמו בתמונה */
+            color: white;
+            padding: 15px 25px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .main-wrapper {
+            display: flex; 
+            flex: 1; 
+        }
+
+        .column {
+            padding: 25px;
+            box-sizing: border-box;
+        }
+
+        .nav-column {
+            flex: 0 0 180px; 
+            background-color: #f7f9fa;
+            border-right: 1px solid #eaeaea;
+        }
+
+        .nav-column h3 {
+            margin-top: 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .nav-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-column li {
+            margin-bottom: 15px;
+        }
+
+        .nav-column a {
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .nav-column a:hover {
+            color: #5c4ca4;
+        }
+
+        .content-column {
+            flex: 1;
+            background-color: white;
+            color: #222;
+        }
+
+        .content-column h1 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #111;
+        }
+
+        .content-column p {
+            line-height: 1.6;
+            color: #444;
+            font-size: 14px;
+        }
+
+        .features-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .features-box h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #334155;
+        }
+
+        .sidebar-column {
+            flex: 0 0 220px; 
+            background-color: #f7f9fa;
+            border-left: 1px solid #eaeaea;
+            display: flex;
+            flex-direction: column;
+            gap: 20px; 
+        }
+
+        .widget {
+            background-color: white;
+            border: 1px solid #e6e6e6;
+            border-radius: 6px;
+            padding: 15px;
+        }
+
+        .widget h4 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .widget p {
+            margin: 0;
+            font-size: 12px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #333a42; 
+            color: #b3bc94; 
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            border-top: 1px solid #222;
+        }
+
+        footer .footer-links {
+            margin-top: 8px;
+        }
+
+        footer a {
+            color: #94a3b8;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Holy Grail Layout Demo
+    </header>
+    <div class="main-wrapper">
+        <nav class="column nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <main class="column content-column">
+            <h1>Welcome to the Holy Grail Layout</h1>
+            <p>
+                This is a demonstration of the classic "Holy Grail" layout pattern implemented using CSS Flexbox. The Holy Grail layout is a web page layout that consists of a header, footer, and three columns. The center column contains the main content, while the left and right columns contain supplementary content like navigation or advertisements.
+            </p>
+            <div class="features-box">
+                <h4>Key Features</h4>
+                <p>This layout demonstrates several important web development concepts including flexible content areas, sticky footer positioning, and responsive design principles that adapt to different screen sizes.</p>
+            </div>
+        </main>
+        <aside class="column sidebar-column">
+            <div class="widget">
+                <h4>Quick Info</h4>
+                <p>This sidebar demonstrates how flexible content areas work in the Holy Grail layout.</p>
+            </div>
+            <div class="widget">
+                <h4>Latest News</h4>
+                <p>Sample content showing how widgets and secondary information can be displayed.</p>
+            </div>
+        </aside>
+    </div>
+    <footer>
+        <div>&copy; 2025 Holy Grail Layout Demo. Built with CSS Flexbox.</div>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Support</a>
+        </div>
+    </footer>
+</body>
+</html>
