@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Art Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Segoe UI;
+            color: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            color: #8b1496;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; 
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            aspect-ratio: 4 / 3; 
+        }
+
+        .gallery-item a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .item-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 70%, transparent 100%);
+            padding: 20px;
+        }
+
+        .item-text {
+            margin: 0;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.9); 
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-item {
+            width: 100%; 
+        }
+        .item-text {
+            font-size: 14px; 
+        }
+
+        @media (min-width: 600px) {
+            .gallery-item {
+                width: calc(50% - (20px / 2)); 
+            }
+            .item-text {
+                font-size: 16px; 
+            }
+        }
+
+        @media (min-width: 900px) {
+            .gallery-item {
+                width: calc(100% / 3 - (20px * 2 / 3)); 
+            }
+            .item-text {
+                font-size: 18px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Visual Arts Gallery</h1>
+        </header>
+
+        <main class="gallery">
+            <div class="gallery-item">
+                <a href="https://picsum.photos/id/10/1200/800" target="_blank">
+                    <img src="https://picsum.photos/id/10/600/400" alt="Paintings & Prints">
+                    <div class="item-overlay">
+                        <p class="item-text">Paintings & Prints</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="https://picsum.photos/id/26/800/1200" target="_blank">
+                    <img src="https://picsum.photos/id/26/500/800" alt="Photography">
+                    <div class="item-overlay">
+                        <p class="item-text">Photography</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="https://picsum.photos/id/42/1200/900" target="_blank">
+                    <img src="https://picsum.photos/id/42/600/450" alt="Drawings & Illustration">
+                    <div class="item-overlay">
+                        <p class="item-text">Drawings & Illustration</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="https://picsum.photos/id/60/1200/1200" target="_blank">
+                    <img src="https://picsum.photos/id/60/600/600" alt="Digital Art">
+                    <div class="item-overlay">
+                        <p class="item-text">Digital Art</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="https://picsum.photos/id/103/1200/800" target="_blank">
+                    <img src="https://picsum.photos/id/103/600/400" alt="Sculptures & Carvings">
+                    <div class="item-overlay">
+                        <p class="item-text">Sculptures & Carvings</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="https://picsum.photos/id/106/1200/700" target="_blank">
+                    <img src="https://picsum.photos/id/106/600/350" alt="Ceramics & Pottery">
+                    <div class="item-overlay">
+                        <p class="item-text">Ceramics & Pottery</p>
+                    </div>
+                </a>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>
