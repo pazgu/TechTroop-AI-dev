@@ -10,3 +10,35 @@ function twoSumBruteForce(arr, target) {
         }
     }   return false;
 }
+
+//better solution: O(n log n) time complexity, O(n) space complexity with sort and two pointers
+
+function twoSumTwoPointers(arr, target) {
+    arr.sort((a, b) => a - b); //O(n log n) time complexity
+    let left = 0;
+    let right = arr.length - 1;
+    while (left < right) {
+        const sum = arr[left] + arr[right];
+        if (sum === target) {
+            return true;
+        } else if (sum < target) {
+            left++;
+        } else {
+            right--;
+        }
+    }
+    return false;
+}
+
+//better solution: O(n) time complexity, O(n) space complexity with hash set
+
+function twoSumHashSet(arr, target) {   
+    const seen = new Set();
+    for (let num of arr) {
+        const complement = target - num;
+        if (seen.has(complement)) {
+            return true;
+        }
+        seen.add(num);
+    }    return false;
+}
