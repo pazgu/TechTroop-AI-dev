@@ -10,12 +10,12 @@ function printDuplicatesBruteForce(arr) {
     }   console.log(duplicates);
 }
 
-//better solution: O(n) time complexity with sort
+//better solution: O(n log n) time complexity with sort
 
 function printDuplicatesSort(arr) {
     const duplicates = [];
-    arr.sort((a, b) => a - b);
-    for (let i = 1; i < arr.length; i++) {
+    arr.sort((a, b) => a - b); //O(n log n) time complexity
+    for (let i = 1; i < arr.length; i++) { //O(n) time complexity
         if (arr[i] === arr[i - 1] && !duplicates.includes(arr[i])) {
             duplicates.push(arr[i]);
         }
