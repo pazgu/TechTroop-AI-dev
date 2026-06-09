@@ -1,4 +1,4 @@
-const { add, calculateHyp, clearLowPriority } = require('./code')
+const { add, calculateHyp, clearLowPriority, convertArraysToObject } = require('./code')
 
 test("add should return sum of a + b", () => {
     let sum = add(1, 2)
@@ -20,3 +20,25 @@ test("calculateHyp should return the hypotenuse of a right triangle", () => {
     let hypotenuse = calculateHyp(3, 4)
     expect(hypotenuse).toBe(5)
 })
+
+test("should convert two arrays of equal length to a single object with key-values from the arrays", () => {
+    const x = ["food", "item", "location"]
+    const y = ["cherry", "lightbulb", "Tazmania"]
+
+    let result = convertArraysToObject(x, y);
+
+    expect(result).toEqual({
+        food: "cherry",
+        item: "lightbulb",
+        location: "Tazmania"
+    })
+})
+
+test("should return a message when array lengths don't match", () => {
+    const x = ["food", "item"]
+    const y = ["cherry", "lightbulb", "Tazmania"]   
+
+    let result = convertArraysToObject(x, y);
+
+    expect(result).toEqual("Arrays must be of equal length");
+});     
