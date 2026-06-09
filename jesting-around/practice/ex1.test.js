@@ -11,4 +11,10 @@ describe('isEven', () => {
     expect(result).toBeFalsy();
   });
 
+  test('should return false if the parameter is not a number, or is null/undefined', () => {
+  expect(isEven("hello")).toBeFalsy();
+  expect(isEven(null)).toBeFalsy();
+  expect(isEven()).toBeFalsy(); 
+});
+
 });

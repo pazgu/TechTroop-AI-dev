@@ -21,4 +21,11 @@ describe('validate', () => {
     expect(validate(moreFalseInput)).toBe(false);
   });
 
+  test('should return the error object if the array has items, but NONE of them are booleans', () => {
+  const badInput = ["true", 1, 0, "hello"]; 
+  const result = validate(badInput);
+  
+  expect(result).toEqual({ error: "Need at least one boolean" });
+});
+
 });

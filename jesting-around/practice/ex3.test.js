@@ -24,4 +24,10 @@ describe('simplify', () => {
     expect(result).toBe("");
   });
 
+  test('should return an empty string or handle non-string types safely', () => {
+  expect(simplify()).toBe(""); 
+  expect(simplify(null)).toBe("");
+  expect(simplify(123)).toBe("123"); 
+});
+
 });

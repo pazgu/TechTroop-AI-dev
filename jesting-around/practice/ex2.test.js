@@ -11,4 +11,9 @@ describe('removeAtLeastOne', () => {
     expect(resultArray.length).toBeGreaterThanOrEqual(1);
   });
 
+  test('should handle edge-case arrays with 0 or 1 elements safely', () => {
+  expect(removeAtLeastOne([])).toEqual([]);
+  expect(removeAtLeastOne(['only-item'])).toEqual([]);
+
+  })
 });
