@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Validation Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Update Employee Details</h2>
+
+      <label for="nameInput">Full Name:</label>
+      <input type="text" id="nameInput" placeholder="Enter your name..." />
+
+      <label for="salaryInput">Requested Monthly Salary:</label>
+      <input type="number" id="salaryInput" placeholder="e.g., 12000" />
+
+      <label for="birthdayInput">Birth Date:</label>
+      <input type="date" id="birthdayInput" />
+
+      <label for="phoneInput">Phone Number:</label>
+      <input
+        type="text"
+        id="phoneInput"
+        placeholder="10 digits (without hyphens)"
+      />
+
+      <button id="validateButton">Submit Form</button>
+
+      <div id="errorContainer"></div>
+    </div>
+  </body>
+</html>
