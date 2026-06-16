@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIF Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+        padding: 20px;
+      }
+      #gif-container iframe {
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 480px;
+        height: 480px;
+      }
+    </style>
+    <script src="ex4.js" defer></script>
+  </head>
+  <body>
+    <h1>My Favorite GIF</h1>
+    <div class="search-box">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Type something to search..."
+      />
+      <button id="search-btn">Search GIF</button>
+    </div>
+    <div id="gif-container">Loading your GIF... ⏳</div>
+  </body>
+</html>
