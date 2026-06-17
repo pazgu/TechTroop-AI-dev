@@ -60,5 +60,3 @@ const Tweeter = function () {
     removeComment,
   };
 };
-
-export default Tweeter();
