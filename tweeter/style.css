@@ -1,0 +1,149 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e6ecf0;
+  color: #14171a;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#container {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  color: #1da1f2;
+  text-align: center;
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+#input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+#post-input {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid #ccd6dd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#post-input:focus {
+  border-color: #1da1f2;
+}
+
+#post-button {
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#post-button:hover {
+  background-color: #1991db;
+}
+
+.post {
+  background-color: #fff;
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.post-text {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.delete {
+  color: #e0245e;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.delete:hover {
+  text-decoration: underline;
+}
+
+.comments {
+  border-top: 1px solid #f5f8fa;
+  padding-top: 10px;
+  margin-bottom: 15px;
+}
+
+.comment {
+  background-color: #f5f8fa;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.delete-comment {
+  color: #aab8c2;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.8rem;
+  transition: color 0.2s;
+}
+
+.delete-comment:hover {
+  color: #e0245e;
+}
+
+.comment-input {
+  width: calc(100% - 100px);
+  padding: 8px;
+  border: 1px solid #ccd6dd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.comment-input:focus {
+  border-color: #1da1f2;
+}
+
+.comment-button {
+  background-color: #fff;
+  color: #1da1f2;
+  border: 1px solid #1da1f2;
+  padding: 7px 15px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background-color 0.2s;
+}
+
+.comment-button:hover {
+  background-color: #f4f8fa;
+}
