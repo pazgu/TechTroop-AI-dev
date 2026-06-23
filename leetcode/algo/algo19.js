@@ -26,6 +26,24 @@ function firstNonRepeating(str) {
   return null;
 }
 
+//with constant array of 26 letters and performance of arriving to exact index in array is greater than in object
+
+function firstNonRepeatingConstantArray(str) {
+  const appearence = new Array(26).fill(0);
+  const ASCII_a = "a".charCodeAt(0);
+  for (const ch of str) {
+    const index = ch.charCodeAt(0) - ASCII_a;
+    appearence[index]++;
+  }
+  for (const ch of str) {
+    const index = ch.charCodeAt(0) - ASCII_a;
+    if (appearence[index] === 1) {
+      return ch;
+    }
+  }
+  return null;
+}
+
 // Tests
 console.log(firstNonRepeating("leetcode")); // → "l"
 console.log(firstNonRepeating("aabb")); // → null
