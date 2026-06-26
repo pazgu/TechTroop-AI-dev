@@ -10,6 +10,7 @@
 // Input:  "hello"     →  Output: "olleh"
 // Input:  "algorithm" →  Output: "mhtirogla"
 
+// 2 pointers solution
 function reverseString(str) {
   const arr = str.split("");
   let left = 0;
@@ -20,4 +21,13 @@ function reverseString(str) {
     right--;
   }
   return arr.join("");
+}
+
+//another solution
+function reverseString(str) {
+  let reversed = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
+  return reversed;
 }
