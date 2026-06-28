@@ -22,9 +22,7 @@ function isAnagram(a, b) {
     if (!occur[ch]) {
       return false;
     }
-    if (occur[ch] !== 1) {
-      occur[ch] -= 1;
-    }
+    occur[ch] -= 1;
   }
 
   return true;
