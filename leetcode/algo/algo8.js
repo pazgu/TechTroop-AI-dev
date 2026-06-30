@@ -31,19 +31,29 @@ function findPairs(arr, target) {
 
 function findPairs(arr, target) {
   const duplicates = [];
-  let left = 1;
-  let right = arr.length - 1;
 
   const sortedArr = arr.sort((a, b) => a - b);
+
+  let left = 0;
+  let right = arr.length - 1;
+
   while (left < right) {
-    if (sortedArr[left - 1] + sortedArr[right] === target) {
-      if (sortedArr[left] !== sortedArr[left - 1]) {
+    const sum = sortedArr[left] + sortedArr[right];
+
+    if (sum === target) {
+      if (left === 0 || sortedArr[left] !== sortedArr[left - 1]) {
         duplicates.push([sortedArr[left], sortedArr[right]]);
       }
       left += 1;
       right -= 1;
+    } else if (sum > target) {
+      right -= 1;
+    } else {
+      left += 1;
     }
   }
+
+  return duplicates;
 }
 
 function findPairsTwoPointers(arr, target) {
@@ -63,14 +73,11 @@ function findPairsTwoPointers(arr, target) {
       while (left < right && sorted[left] === sorted[left + 1]) left++;
       while (left < right && sorted[right] === sorted[right - 1]) right--;
 
-      // זזים פנימה להמשך החיפוש
       left++;
       right--;
     } else if (sum > target) {
-      // הסכום גדול מדי -> נזיז את ימין שמאלה כדי לקבל מספר קטן יותר
       right--;
     } else {
-      // הסכום קטן מדי -> נזיז את שמאל ימינה כדי לקבל מספר גדול יותר
       left++;
     }
   }
