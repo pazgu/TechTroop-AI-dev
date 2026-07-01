@@ -26,7 +26,7 @@ function reverseWords(str) {
   const arr = str.split(" ");
   const reversved = [];
   if (arr.length === 1) return arr.join(" ");
-  for (let i = arr.length - 1; i > 0; i--) {
+  for (let i = arr.length - 1; i >= 0; i--) {
     reversved.push(arr[i]);
   }
   return reversved.join(" ");
